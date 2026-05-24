@@ -8,7 +8,7 @@ function sendMessage(event) {
     let recipient = document.getElementById("recipient").value;
     let message = document.getElementById("messageText").value;
 
-    if(recipient === "" || message === "") {
+    if (recipient.trim() === "" || message.trim() === "") {
         alert("Please complete all fields.");
         return;
     }
@@ -17,4 +17,8 @@ function sendMessage(event) {
 
     document.getElementById("recipient").value = "";
     document.getElementById("messageText").value = "";
+}
+
+function sendConnection(name) {
+    alert("Connection request sent to " + name);
 }
