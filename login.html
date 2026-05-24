@@ -17,7 +17,8 @@
 <h1>Login</h1>
 
 <div>
-<form>
+<form onsubmit="fakeLogin(event)">
+
 <label>Email</label><br>
 <input type="email" placeholder="Enter email"><br><br>
 
@@ -25,11 +26,14 @@
 <input type="password" placeholder="Enter password"><br><br>
 
 <button type="submit">Login</button>
+
 </form>
 
 <p>No account?</p>
 <a href="register.html">Create Account</a>
 </div>
+
 <script src="js/app.js"></script>
+
 </body>
 </html>
