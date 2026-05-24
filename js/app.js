@@ -133,3 +133,20 @@ function searchProfiles(event) {
         }
     });
 }
+function searchProfiles(event) {
+    event.preventDefault();
+
+    let searchTerm = document.getElementById("searchInput").value.toLowerCase();
+
+    let cards = document.querySelectorAll(".profile-card");
+
+    cards.forEach(function(card) {
+        let text = card.innerText.toLowerCase();
+
+        if (text.includes(searchTerm)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
