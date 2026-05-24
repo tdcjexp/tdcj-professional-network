@@ -41,3 +41,8 @@ function showWelcome() {
         welcomeBox.innerHTML = "Welcome, " + user;
     }
 }
+function logout() {
+    localStorage.removeItem("loggedInUser");
+    alert("Logged out");
+    window.location.href = "index.html";
+}
