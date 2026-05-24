@@ -46,3 +46,10 @@ function logout() {
     alert("Logged out");
     window.location.href = "index.html";
 }
+function loadProfile() {
+    let user = localStorage.getItem("loggedInUser");
+
+    if(user){
+        document.getElementById("profileName").innerHTML = user;
+    }
+}
