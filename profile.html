@@ -22,28 +22,30 @@
 
 <div>
 
+<div>
+
 <h2 id="profileName">User Name</h2>
 
-<p><strong>Current Position:</strong> Correctional Officer</p>
+<label>Current Position</label><br>
+<input id="position" value="Correctional Officer"><br><br>
 
-<p><strong>Experience:</strong> 5 Years</p>
+<label>Years of Experience</label><br>
+<input id="experience" value="5"><br><br>
 
-<p><strong>Areas of Expertise:</strong></p>
+<label>Areas of Expertise</label><br>
+<input id="expertise"
+value="Transportation, Use of Force, Security Procedures"><br><br>
 
-<ul>
-<li>Transportation</li>
-<li>Use of Force</li>
-<li>Security Procedures</li>
-</ul>
+<label>About</label><br>
 
-<p><strong>About:</strong></p>
-
-<p>
+<textarea id="about">
 Professional networking profile description goes here.
-</p>
+</textarea>
 
-<button onclick="comingSoon('Edit profile')">
-Edit Profile
+<br><br>
+
+<button onclick="saveProfile()">
+Save Profile
 </button>
 
 </div>
