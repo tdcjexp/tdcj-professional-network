@@ -103,3 +103,16 @@ savedProfile.about;
 }
 
 }
+function loadSearchResults() {
+    let user = localStorage.getItem("loggedInUser");
+    let savedProfile = JSON.parse(localStorage.getItem("profileData"));
+
+    if (user) {
+        document.getElementById("searchName").innerHTML = user;
+    }
+
+    if (savedProfile) {
+        document.getElementById("searchPosition").innerHTML = savedProfile.position;
+        document.getElementById("searchExpertise").innerHTML = savedProfile.expertise;
+    }
+}
