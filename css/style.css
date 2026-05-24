@@ -30,3 +30,16 @@ div {
     margin: 10px 0;
     border-radius: 10px;
 }
+nav {
+    background: #1f3b57;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 12px;
+    font-weight: bold;
+}
