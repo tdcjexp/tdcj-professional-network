@@ -22,3 +22,22 @@ function sendMessage(event) {
 function sendConnection(name) {
     alert("Connection request sent to " + name);
 }
+
+function fakeLogin(event) {
+    event.preventDefault();
+
+    localStorage.setItem("loggedInUser", "Joseph Fincher");
+
+    alert("Logged in as Joseph Fincher");
+
+    window.location.href = "index.html";
+}
+
+function showWelcome() {
+    let user = localStorage.getItem("loggedInUser");
+    let welcomeBox = document.getElementById("welcomeBox");
+
+    if (user && welcomeBox) {
+        welcomeBox.innerHTML = "Welcome, " + user;
+    }
+}
