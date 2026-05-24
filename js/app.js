@@ -53,3 +53,53 @@ function loadProfile() {
         document.getElementById("profileName").innerHTML = user;
     }
 }
+function saveProfile(){
+
+let profile = {
+
+position: document.getElementById("position").value,
+
+experience: document.getElementById("experience").value,
+
+expertise: document.getElementById("expertise").value,
+
+about: document.getElementById("about").value
+
+};
+
+localStorage.setItem(
+"profileData",
+JSON.stringify(profile)
+);
+
+alert("Profile saved");
+}
+
+function loadProfile() {
+
+let user = localStorage.getItem("loggedInUser");
+
+if(user){
+document.getElementById("profileName").innerHTML = user;
+}
+
+let savedProfile =
+JSON.parse(localStorage.getItem("profileData"));
+
+if(savedProfile){
+
+document.getElementById("position").value =
+savedProfile.position;
+
+document.getElementById("experience").value =
+savedProfile.experience;
+
+document.getElementById("expertise").value =
+savedProfile.expertise;
+
+document.getElementById("about").value =
+savedProfile.about;
+
+}
+
+}
